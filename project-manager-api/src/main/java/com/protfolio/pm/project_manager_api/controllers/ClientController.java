@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class ProjectController {
+public class ClientController {
 
     private final ProjectFacade projectFacade;
 
@@ -19,12 +19,12 @@ public class ProjectController {
         this.projectFacade = projectFacade;
     }
 
-    @GetMapping("/project")
-    public ResponseEntity<List<ProjectDTO>> getProjects() {
+    @GetMapping("/client/{id}")
+    public ResponseEntity<List<Client>> getClientById(int id) {
         return ResponseEntity.ok(projectFacade.getProjects());
     }
     
-    @PostMapping("/project")
+    @PostMapping("/client")
     public ResponseEntity<String> createProject(@RequestBody Project project) {
         Project savedProject = projectFacade.insertProject(project);
         return ResponseEntity.ok("OK");

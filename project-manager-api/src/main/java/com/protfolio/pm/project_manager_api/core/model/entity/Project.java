@@ -29,9 +29,9 @@ public class Project {
 
     private LocalDate deadlineDate;
 
-//    @ManyToOne
-//    @JoinColumn(name="client_id", nullable= false)
-//    private Client client;
+   @ManyToOne
+   @JoinColumn(name="client_id", nullable= false)
+   private Client client;
 
     @Enumerated(EnumType.STRING)
     private ProjectStatus status;

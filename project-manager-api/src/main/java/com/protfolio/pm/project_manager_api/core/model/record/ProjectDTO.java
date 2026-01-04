@@ -1,0 +1,1 @@
+public record ProjectDTO(String name, String description, LocalDate startDate, LocalDate deadlineDate, ProjectStatus status);
