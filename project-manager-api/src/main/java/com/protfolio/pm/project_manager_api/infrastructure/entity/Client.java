@@ -1,9 +1,15 @@
-package com.protfolio.pm.project_manager_api.core.model.entity;
+package com.protfolio.pm.project_manager_api.infrastructure.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "clients")
 public class Client {

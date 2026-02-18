@@ -1,9 +1,16 @@
-package com.protfolio.pm.project_manager_api.core.model.entity;
+package com.protfolio.pm.project_manager_api.infrastructure.entity;
 
+import com.protfolio.pm.project_manager_api.core.model.enums.UserRole;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -17,5 +24,6 @@ public class User {
     private String email;
     private String username;
     private String password;
-    private String roles;
+    @Enumerated(EnumType.STRING)
+    private UserRole roles;
 }

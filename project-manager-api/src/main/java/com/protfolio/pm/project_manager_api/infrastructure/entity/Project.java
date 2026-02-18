@@ -1,6 +1,6 @@
-package com.protfolio.pm.project_manager_api.core.model.entity;
+package com.protfolio.pm.project_manager_api.infrastructure.entity;
 
-import com.protfolio.pm.project_manager_api.core.model.ProjectStatus;
+import com.protfolio.pm.project_manager_api.core.model.enums.ProjectStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
