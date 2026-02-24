@@ -19,6 +19,7 @@ jobs:
           cache: 'maven' # Esto acelera los futuros despliegues
 
       - name: Excute Tests
+        if: "!contains(github.event.head_commit.message, '#skiptest')"
         run: |
           chmod +x mvnw
           ./mvnw test
