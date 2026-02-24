@@ -39,6 +39,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./project-manager-api # Tu carpeta de Spring Boot
+          context: . # Tu carpeta de Spring Boot
           push: true
           tags: ikeragi05/project-manager-api:latest
