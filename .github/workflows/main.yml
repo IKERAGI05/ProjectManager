@@ -19,7 +19,9 @@ jobs:
           cache: 'maven' # Esto acelera los futuros despliegues
 
       - name: Excute Tests
-        run: ./mvnw test
+        run: |
+          chmod +x mvnw
+          ./mvnw test
         working-directory: ./project-manager-api
 
       - name: Log in to Docker Hub
@@ -29,7 +31,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Package
-        run: ./mvnw package -DskipTests
+        run: |
+          chmod +x mvnw
+          ./mvnw package -DskipTests
         working-directory: ./project-manager-api
 
       - name: Build and push Docker image
