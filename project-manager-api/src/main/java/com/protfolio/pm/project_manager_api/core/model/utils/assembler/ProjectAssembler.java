@@ -1,4 +1,4 @@
-package com.protfolio.pm.project_manager_api.core.model.utils;
+package com.protfolio.pm.project_manager_api.core.model.utils.assembler;
 
 import com.protfolio.pm.project_manager_api.core.model.dto.client.ClientReturn;
 import com.protfolio.pm.project_manager_api.core.model.dto.project.CreateProjectBody;
