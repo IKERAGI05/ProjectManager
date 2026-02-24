@@ -1,2 +1,2 @@
-# ProyectManager
-Proyect to manage proyects and follow the state of it
+# ProjectManager
+Project to manage projects and follow the state of it
