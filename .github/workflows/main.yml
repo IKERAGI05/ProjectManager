@@ -20,6 +20,7 @@ jobs:
 
       - name: Excute Tests
         run: ./mvnw test
+        working-directory: ./project-manager-api
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -29,6 +30,7 @@ jobs:
 
       - name: Package
         run: ./mvnw package -DskipTests
+        working-directory: ./project-manager-api
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
