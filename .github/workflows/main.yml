@@ -31,7 +31,8 @@ jobs:
   docker:
     needs: test
     if: |
-      needs.test.result == 'success' || needs.test.result == 'skipped'
+      always() && 
+      (needs.test.result == 'success' || needs.test.result == 'skipped')
     runs-on: ubuntu-latest
     steps:
       - name: Log in to Docker Hub
