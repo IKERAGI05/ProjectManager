@@ -40,5 +40,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: . # Tu carpeta de Spring Boot
+          file: Dockerfile
           push: true
           tags: ikeragi05/project-manager-api:latest
